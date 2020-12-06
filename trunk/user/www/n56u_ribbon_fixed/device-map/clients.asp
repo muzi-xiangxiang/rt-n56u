@@ -35,6 +35,13 @@ var blocked_clients = new Array();
 var page_modified = 0;
 
 function initial(){
+for (var zdy = 0; zdy < clients.length; zdy++) {
+		for(var index in m_dhcp){
+			if (m_dhcp[index][0] == clients[zdy][2]) {
+				clients[zdy][0] = m_dhcp[index][2]
+			}
+		}
+	}
 	if (sw_mode == "3") {
 		list_type = '0';
 	}
